@@ -10,6 +10,7 @@ import gsap from "gsap";
 import { CardWithForm } from "@/component/Cards";
 import { SparklesText } from "@/components/magicui/sparkles-text";
 
+
 export default function Home() {
   const { resolvedTheme } = useTheme();
   const [color, setColor] = useState("#ffffff");

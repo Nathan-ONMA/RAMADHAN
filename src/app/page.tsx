@@ -2,8 +2,13 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { Particles } from "@/components/magicui/particles";
+import { useTheme } from "next-themes";
 
 export default function TimerPage() {
+  const [color, setColor] = useState("#ffffff");
+  const { resolvedTheme } = useTheme();
+
   const [timeLeft, setTimeLeft] = useState({
     day: "00",
     hour: "00",
@@ -13,6 +18,8 @@ export default function TimerPage() {
   const router = useRouter();
 
   useEffect(() => {
+    setColor(resolvedTheme === "dark" ? "#000000" : "#ffffff");
+
     // Date cible : Mar 25, 2025 16:24:59
     const targetTime = new Date("Mar 25, 2025 23:10:00").getTime();
 
@@ -51,6 +58,13 @@ export default function TimerPage() {
 
   return (
     <div className="w-screen h-screen bg-[url('/background.jpg')] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center p-4 text-center">
+      <Particles
+        className="absolute inset-0 z-0"
+        quantity={100}
+        ease={80}
+        color={color}
+        refresh
+      />
       <h1 className="text-white text-[40px] font-light tracking-[6px] mb-6">
         PATIENTE SAKINA
       </h1>
