@@ -24,7 +24,7 @@ export default function Home() {
     const counter2 = document.querySelector(".counter-2") as HTMLElement | null;
     const counter1 = document.querySelector(".counter-1") as HTMLElement | null;
     // Date cible : Mar 25, 2025 16:24:59
-    const targetTime = new Date("Mar 25, 2025 23:10:00").getTime();
+    const targetTime = new Date("Mar 25, 2025 11:59:59").getTime();
     const now = new Date().getTime();
     if (now < targetTime) {
       // Si l'heure actuelle est avant la date cible, rediriger vers la page d'accueil

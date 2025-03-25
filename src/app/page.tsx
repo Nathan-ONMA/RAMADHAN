@@ -21,7 +21,7 @@ export default function TimerPage() {
     setColor(resolvedTheme === "dark" ? "#000000" : "#ffffff");
 
     // Date cible : Mar 25, 2025 16:24:59
-    const targetTime = new Date("Mar 25, 2025 23:10:00").getTime();
+    const targetTime = new Date("Mar 25, 2025 11:59:59").getTime();
 
     const updateTimer = () => {
       const now = new Date().getTime();
